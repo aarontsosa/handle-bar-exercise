@@ -1,5 +1,17 @@
-<h1>{{name}}</h1>
-<p>Contact Information:</p>
-<p>email: {{email}}</p>
-<p>number: {{number}}</p>
-<p>job: {{employment}}</p>
+{{#each members}}
+    <h1><a href="localhost:3000/users/{{memid}}">{{firstname}} {{surname}}</a></h1>
+    <table class="table">
+        <tbody>
+            <th>
+                <th>Address</th>
+                <th>Phone Number</th>
+            </th>
+            <tr>
+                <th scope="row"></th>
+                    <td>{{address}}</td>
+                    <td>{{telephone}}</td>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+{{/each}}

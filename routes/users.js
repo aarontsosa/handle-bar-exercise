@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
+const db = require('../db')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('users', { 
-    name: 'Aaron Sosa',
-    email: 'aarontsosa@gmail.com',
-    number: '678-481-1582',
-    employment: 'none'
-  });
-});
+router.get('/', function(req, res, next)  {
+    db.query(`
+        select * from cd.members where memid != 0;
+        `).then( (result) => {
+            res.render('users', { 
+                members: result
+        })
+    })
+})
+
 
 module.exports = router;
