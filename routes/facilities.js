@@ -4,7 +4,7 @@ const db = require('../db')
 
 router.get('/:id', function(req, res, next)  {
     db.one(`
-        select * from cd.facilities where facid=${req.params.id};
+        select * from cd.members where memid=${req.params.id};
         `).then( (result) => {
             res.render('facilities', { 
                 facilities: result

@@ -1,23 +1,63 @@
 html {
-  font-size: 10px;
+  font-size: 40px;
   background-color: rgba(210, 210, 210, 0.5);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'Just Another Hand', cursive;
 }
 a {
   color: #00B7FF;
 }
-
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
 body {
+  font-family: 'Just Another Hand', cursive;
   padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 30px;
-  border-radius: 30px;
-  box-shadow: 1px 1px 1px rgba(180, 180, 180, 0.4);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.00);
 }
 
 main{
+  font-size: 400%;
+  font-family: 'Just Another Hand', cursive;
   text-indent: 50px;
+  text-shadow: 1px 1px black;
+}
+h1{
+  font-size: 400%;
+  text-shadow: 1px 1px black;
+}
+h4{
+  font-size: 100%;
 }
 a{
-  color: black;
+  color: #23357F;
+  text-decoration-color: white;
+  text-shadow: 1px 1px black;
+}
+footer {
+  margin: 0;
+  padding: 0;
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background: #333;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* The only rule that matters */
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
 }

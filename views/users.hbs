@@ -1,16 +1,14 @@
 {{#each members}}
-    <h1><a href="localhost:3000/users/{{memid}}">{{firstname}} {{surname}}</a></h1>
+    <h1><a href="{{memid}}">{{firstname}} {{surname}}</a></h1>
     <table class="table">
         <tbody>
-            <th>
+            <tr>
                 <th>Address</th>
                 <th>Phone Number</th>
-            </th>
+            </tr>
             <tr>
-                <th scope="row"></th>
-                    <td>{{address}}</td>
-                    <td>{{telephone}}</td>
-                </th>
+                <td class="col-6">{{address}}</td>
+                <td class="col-6">{{telephone}}</td>
             </tr>
         </tbody>
     </table>
