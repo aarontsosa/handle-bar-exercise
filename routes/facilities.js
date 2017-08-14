@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const db = require('../db')
 
 router.get('/', function(req, res, next)  {
-    res.render('facilities', { 
-        facilitiy: 'Tennis Court 1',
-        when: "3pm-4pm",
-        who: "Aaron Sosa"
+    db.one(`
+        select * from cd.facilities where facid=7;
+        `).then( (result) => {
+            res.render('facilities', { 
+                facilities: result
+        })
     })
 })
 
